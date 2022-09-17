@@ -157,9 +157,12 @@ Widget _valueText(
         opacity: opacity,
         child: SizedBox(
           width: letterWidth,
-          child: Text(
-            value.toString(),
-            style: numberTextStyle,
+          child: Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Text(
+              value.toString(),
+              style: numberTextStyle,
+            ),
           ),
         ),
       ),
