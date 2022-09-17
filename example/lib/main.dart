@@ -79,9 +79,17 @@ class _MyHomePageState extends State<MyHomePage>
             Padding(
               padding: const EdgeInsets.only(top: 30),
               child: SlideOdometerTransition(
-                letterWidth: 20,
+                letterWidth: 30,
                 odometerAnimation: animation,
-                numberTextStyle: const TextStyle(fontSize: 20),
+                numberTextStyle: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white.withOpacity(.9),
+                    shadows: const [
+                      Shadow(
+                          color: Colors.white,
+                          offset: const Offset(1, 1),
+                          blurRadius: 15),
+                    ]),
               ),
             ),
             Padding(

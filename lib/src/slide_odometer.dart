@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:odometer/src/odometer_animation.dart';
 import 'package:odometer/src/odometer_number.dart';
@@ -155,10 +156,12 @@ Widget _valueText(
       offset: Offset(0, offsetY),
       child: Opacity(
         opacity: opacity,
-        child: SizedBox(
+        child: Container(
+          margin: const EdgeInsets.all(5),
           width: letterWidth,
-          child: Padding(
-            padding: const EdgeInsets.all(5.0),
+          color: Colors.black87,
+          padding: const EdgeInsets.all(5.0),
+          child: Center(
             child: Text(
               value.toString(),
               style: numberTextStyle,
